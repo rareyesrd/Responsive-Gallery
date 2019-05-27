@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <!--Css Styles-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Image Gallery</title>
+</head>
+<body> 
+    <div class="container">
+            <h1>Materialize - image Gallery</h1>
+            <div class="row imglist">
+                <div class="col xs12 m6 l4">
+                        <a href="img/blog1.jpg" data-fancybox="images">
+                            <img src="img/blog1.jpg" class="responsive-img"/>
+                          </a>
+                </div>
+                 <div class="col xs12 m6 l4">
+                        <a href="img/blog1.jpg" data-fancybox="images">
+                            <img src="img/blog1.jpg" class="responsive-img"/>
+                          </a>
+                </div>
+                <div class="col xs12 m6 l4">
+                   <a href="img/blog1.jpg" data-fancybox="images">
+                            <img src="img/blog1.jpg" class="responsive-img"/>
+                          </a>
+                </div>
+                 <div class="col xs12 m6 l4">
+                   <a href="img/blog1.jpg" data-fancybox="images">
+                            <img src="img/blog1.jpg" class="responsive-img"/>
+                          </a>
+                </div>
+                <div class="col xs12 m6 l4">
+                   <a href="img/blog1.jpg" data-fancybox="images">
+                            <img src="img/blog1.jpg" class="responsive-img"/>
+                          </a>
+                </div>
+                 <div class="col xs12 m6 l4">
+                   <a href="img/blog1.jpg" data-fancybox="images">
+                            <img src="img/blog1.jpg" class="responsive-img"/>
+                          </a>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+   
+    <!-- Compiled and minified JQuery and then JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.materialboxed').materialbox();
+        })
+    </script>
+    <script>
+    $('[data-fancybox="images"]').fancybox({
+    afterLoad : function(instance, current) {
+        var pixelRatio = window.devicePixelRatio || 1;
+
+        if ( pixelRatio > 1.5 ) {
+            current.width  = current.width  / pixelRatio;
+            current.height = current.height / pixelRatio;
+        }
+    }
+});
+    </script>
+</body>
+</html>
